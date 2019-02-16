@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat web app</title>
+
+    <!--HEAD IMPORTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-lg-4 pr-5 border-right border-secondary">
+                <h1 class="display-4">People</h1>
+                <hr>
+
+                <ul id="people" class="py-5"></ul>
+            </div>
+            <div class="col-lg-8 pl-5">
+                <h1 class="display-4">Messages:</h1>
+                <hr>
+
+                <ul id="messages" class="message-list py-5"></ul>
+
+                <form class="message-form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" placeholder="Enter a new message" class="form-control message-box"
+                                autofocus>
+
+                            <div class="input-group-append">
+                                <button class=" btn btn-primary">Enter</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="location-btn my-4 btn btn-sm btn-outline-info">Send location</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!--IMPORTS-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/libs/moment.js"></script>
+    <script src="/js/libs/deparam.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>
