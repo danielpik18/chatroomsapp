@@ -10,24 +10,49 @@
     <!--HEAD IMPORTS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/chat.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="bg-img">a</div>
+
     <div class="container">
-        <div class="row pt-5">
-            <div class="col-lg-4 pr-5 border-right border-secondary">
-                <h1 class="display-4">People</h1>
-                <hr>
-
-                <ul id="people" class="py-5"></ul>
+        <div class="row">
+            <div class="col mt-5 border-bottom border-dark bg-dark py-3 w-100">
+                <a href="./index.html" class="lead  text-white"><i class="fas fa-chevron-circle-left"></i>
+                    Join
+                    another room
+                </a>
             </div>
-            <div class="col-lg-8 pl-5">
-                <h1 class="display-4">Messages:</h1>
+        </div>
+
+        <div class="row">
+            <div class="peopleBox col-lg-4 order-2 pl-lg-5">
+                <h2 class="lead">People in this room</h2>
                 <hr>
 
-                <ul id="messages" class="message-list py-5"></ul>
+                <ul id="people" class="py-3"></ul>
+            </div>
+            <div class="col-lg-8 messagesBox">
+                <h2 class="lead">Messages:</h2>
+                <hr>
+
+                <ul id="messages" class="message-list pb-5"></ul>
 
                 <form class="message-form">
                     <div class="form-group">
@@ -38,11 +63,12 @@
                             <div class="input-group-append">
                                 <button class=" btn btn-primary">Enter</button>
                             </div>
+                            <div class="input-group-append ml-3">
+                                <button class="location-btn btn btn-sm btn-outline-info" data-toggle="tooltip" title="Send your location"><i
+                                        class="fas fa-map-marker-alt"></i></button>
+                            </div>
                         </div>
                     </div>
-
-                    <button class="location-btn my-4 btn btn-sm btn-outline-info">Send location</button>
-
                 </form>
 
             </div>

@@ -87,10 +87,10 @@ io.on('connection', socket => {
             io.to(params.room).emit('updateUserList', users.getUserList(params.room));
 
             //What other users see When new user joins
-            socket.broadcast.to(params.room).emit('newMessage', generateMessage('Admin', `${params.name} just joined.`));
+            socket.broadcast.to(params.room).emit('newRoomMessage', generateMessage('Admin', `${params.name} just joined.`));
 
             //What a user who just joined sees
-            socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app!'));
+            socket.emit('newRoomMessage', generateMessage('Admin', 'Welcome to the chat app!'));
 
             callback();
         };
@@ -137,7 +137,7 @@ io.on('connection', socket => {
             updateActiveRooms();
 
             io.to(removedUser.room).emit('updateUserList', users.getUserList(removedUser.room));
-            io.to(removedUser.room).emit('newMessage', generateMessage('Admin', `${removedUser.name} just left the room.`));
+            io.to(removedUser.room).emit('newRoomMessage', generateMessage('Admin', `${removedUser.name} just left the room.`));
         }
     });
 
