@@ -57,6 +57,9 @@ io.on('connection', socket => {
     socket.on('join', (params, callback) => {
         const usersInRoom = users.getUserList(params.room);
 
+        //All inputed room names are lowercased
+        params.room = params.room.toLowerCase();
+
         //If invalid data
         if (!isRealString(params.name) || typeof params.room !== 'string') {
             callback('Name and room are required.');
@@ -137,7 +140,7 @@ io.on('connection', socket => {
             updateActiveRooms();
 
             io.to(removedUser.room).emit('updateUserList', users.getUserList(removedUser.room));
-            io.to(removedUser.room).emit('newRoomMessage', generateMessage('Admin', `${removedUser.name} just left the room.`));
+            io.to(removedUser.room).emit('newLeaveMessage', generateMessage('Admin', `${removedUser.name} just left the room.`));
         }
     });
 

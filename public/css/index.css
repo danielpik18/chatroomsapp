@@ -5,6 +5,31 @@
 
 body {
     width: 100%;
-    background-image: url('../img/indexBG2.png');
     font-family: 'K2D', sans-serif;
+}
+
+.bg-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url('../img/indexBG2.png') center center no-repeat;
+    background-size: cover;
+}
+
+.bg-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #587196, #1b1c22);
+    opacity: .85;
+}
+
+.createRoomInput input:focus {
+    border-color: #5cb85c;
+    box-shadow: 0 .05rem .05rem #5cb85c inset, 0 0 8px #5cb85c;
+    outline: 0 none;
 }

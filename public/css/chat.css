@@ -43,13 +43,11 @@ button {
 
 .message-box {
     padding: 0.4rem;
-    width: 100%;
 }
 
 .message-list {
-    list-style: none;
     height: 500px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .peopleBox,
@@ -60,4 +58,13 @@ button {
 
 #people {
     list-style: none;
+}
+
+#peopleList {
+    height: 340px;
+    overflow: scroll;
+}
+
+#peopleCollapse {
+    background-color: rgb(219, 217, 217);
 }
