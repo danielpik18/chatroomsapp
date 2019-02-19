@@ -69,6 +69,10 @@ socket.on('newMessage', function (msg, callback) {
 
     messagesBox.insertAdjacentHTML('beforeend', html);
 
+    //Scroll to bottom of messages div
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+
+
     // --------
     if (callback) callback();
 });
@@ -90,6 +94,9 @@ socket.on('newRoomMessage', function (msg, callback) {
 
     messagesBox.insertAdjacentHTML('beforeend', html);
 
+    //Scroll to bottom of messages div
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+
     // --------
     if (callback) callback();
 });
@@ -109,6 +116,9 @@ socket.on('newLeaveMessage', function (msg, callback) {
                 `;
 
     messagesBox.insertAdjacentHTML('beforeend', html);
+
+    //Scroll to bottom of messages div
+    messagesBox.scrollTop = messagesBox.scrollHeight;
 
     // --------
     if (callback) callback();
@@ -136,6 +146,9 @@ socket.on('newLocationMessage', (msg, callback) => {
                 `;
 
     messagesBox.insertAdjacentHTML('beforeend', html);
+
+    //Scroll to bottom of messages div
+    messagesBox.scrollTop = messagesBox.scrollHeight;
 
     // --------
     if (callback) callback();
