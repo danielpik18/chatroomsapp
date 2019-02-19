@@ -38,12 +38,12 @@ socket.on('updateUserList', users => {
 
     //Clear lists
     peopleList.innerHTML = null;
-    //peopleInRoom.innerHTML = null;
+    peopleInRoom.innerHTML = null;
 
     //Render users
     users.forEach(user => {
-        peopleList.insertAdjacentHTML('beforeend', `<li><i class="far fa-user pr-3"></i>${user}</li>`);
-        peopleInRoom.insertAdjacentHTML('beforeend', `<p><i class="far fa-user p-2 mr-2"></i>${user}</p>`);
+        peopleList.insertAdjacentHTML('beforeend', `<li class="text-secondary"><i class="far fa-user pr-3"></i>${user}</li>`);
+        peopleInRoom.insertAdjacentHTML('beforeend', `<p class="text-secondary"><i class="far fa-user p-2 mr-2"></i>${user}</p>`);
     });
 });
 
@@ -130,7 +130,7 @@ socket.on('newLocationMessage', (msg, callback) => {
                                 class="fas fa-map-marker-alt pr-1"></i>My current location</a>
                             </div>
                         <div>
-                            <p class="text-secondary">${formatedDate}</p>
+                            <p class="text-secondary"><small>${formatedDate}</small></p>
                         </div>
                     </div>
                 `;

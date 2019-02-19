@@ -37,14 +37,6 @@ body {
     opacity: .6;
 }
 
-button {
-    padding: 0.4rem 2rem;
-}
-
-.message-box {
-    padding: 0.4rem;
-}
-
 .message-list {
     height: 500px;
     overflow-y: scroll;
@@ -53,7 +45,6 @@ button {
 .peopleBox,
 .messagesBox {
     background-color: white;
-    padding: 4rem;
 }
 
 #people {
