@@ -137,7 +137,7 @@ $(document).ready(function () {
         const html =
             `
                         <div>
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-column flex-lg-row justify-content-between">
                                 <div class="d-flex">
                                     <b class="mr-2">${msg.from}:</b>
                                     <a href="${msg.url}" target="_blank"><i
@@ -189,10 +189,4 @@ $(document).ready(function () {
             locationBtn.removeAttribute('disabled');
         });
     });
-
-
-    //Handling users sending emojis
-    function test11() {
-        alert('ppepeee');
-    };
 });
