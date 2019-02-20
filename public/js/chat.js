@@ -2,6 +2,8 @@ $(document).ready(function () {
     const socket = io();
 
     socket.on('connect', function () {
+        //Bootstrap initializations
+        $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip();
 
         console.log('Conntected to server');
@@ -187,4 +189,10 @@ $(document).ready(function () {
             locationBtn.removeAttribute('disabled');
         });
     });
+
+
+    //Handling users sending emojis
+    function test11() {
+        alert('ppepeee');
+    };
 });
